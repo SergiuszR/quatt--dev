@@ -1,6 +1,4 @@
-console.log("Quatt Dev Script");
-
-console.log(window.navigator.userAgent);
-console.log(window.navigator);
-
 let userAgent = window.navigator.userAgent;
+let words = userAgent.split(" ");
+let platform = words[1].replace(/[^a-zA-Z ]/g, "");
+console.log(platform);
