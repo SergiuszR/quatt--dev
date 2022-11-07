@@ -1,3 +1,4 @@
+let downloadBtns = document.querySelectorAll("[app='download']");
 let userAgent = window.navigator.userAgent;
 let words = userAgent.split(" ");
 let platform = words[1].replace(/[^a-zA-Z ]/g, "");
@@ -26,12 +27,18 @@ function useRegexIpad(userAgent) {
 
 if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
   alert(`Platform L: ${platform}`);
+  downloadBtns.forEach((n) => {
+    n.href = "#playstore";
+  });
 } else if (
   useRegexMacintosh(userAgent) ||
   useRegexIphone(userAgent) ||
   useRegexIpad(userAgent)
 ) {
   alert(`Platform H: ${platform}`);
+  downloadBtns.forEach((n) => {
+    n.href = "#appstore";
+  });
 }
 
 console.log(useRegexAndroid(userAgent));
