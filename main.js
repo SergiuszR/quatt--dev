@@ -24,4 +24,14 @@ function useRegexIpad(userAgent) {
   return regex.test(userAgent);
 }
 
+if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
+  alert(`Platform L: ${platform}`);
+} else if (
+  useRegexMacintosh(userAgent) ||
+  useRegexIphone(userAgent) ||
+  useRegexIpad(userAgent)
+) {
+  alert(`Platform H: ${platform}`);
+}
+
 console.log(useRegexAndroid(userAgent));
