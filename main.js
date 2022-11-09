@@ -28,7 +28,8 @@ function useRegexIpad(userAgent) {
 if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
   alert(`Platform L: ${platform}`);
   downloadBtns.forEach((n) => {
-    n.href = "#playstore";
+    n.href =
+      "https://play.google.com/store/apps/details?id=io.quatt.mobile.android";
   });
 } else if (
   useRegexMacintosh(userAgent) ||
@@ -37,7 +38,7 @@ if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
 ) {
   alert(`Platform H: ${platform}`);
   downloadBtns.forEach((n) => {
-    n.href = "#appstore";
+    n.href = "https://apps.apple.com/nl/app/id1626258455";
   });
 }
 
