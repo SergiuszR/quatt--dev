@@ -27,6 +27,7 @@ function useRegexIpad(userAgent) {
 
 if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
   // alert(`Platform L: ${platform}`);
+
   downloadBtns.forEach((n) => {
     n.href =
       "https://play.google.com/store/apps/details?id=io.quatt.mobile.android";
