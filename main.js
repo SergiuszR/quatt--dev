@@ -2,7 +2,7 @@ let downloadBtns = document.querySelectorAll("[app='download']");
 let userAgent = window.navigator.userAgent;
 let words = userAgent.split(" ");
 let platform = words[1].replace(/[^a-zA-Z ]/g, "");
-console.log(platform);
+// console.log(platform);
 
 function useRegexAndroid(userAgent) {
   let regex = /\bAndroid\b/gm;
@@ -26,7 +26,7 @@ function useRegexIpad(userAgent) {
 }
 
 if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
-  alert(`Platform L: ${platform}`);
+  // alert(`Platform L: ${platform}`);
   downloadBtns.forEach((n) => {
     n.href =
       "https://play.google.com/store/apps/details?id=io.quatt.mobile.android";
@@ -36,10 +36,10 @@ if (useRegexWindows(userAgent) || useRegexAndroid(userAgent)) {
   useRegexIphone(userAgent) ||
   useRegexIpad(userAgent)
 ) {
-  alert(`Platform H: ${platform}`);
+  // alert(`Platform H: ${platform}`);
   downloadBtns.forEach((n) => {
     n.href = "https://apps.apple.com/nl/app/id1626258455";
   });
 }
 
-console.log(useRegexAndroid(userAgent));
+// console.log(useRegexAndroid(userAgent));
